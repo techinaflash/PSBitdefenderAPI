@@ -1,0 +1,32 @@
+# See http://www.appveyor.com/docs/appveyor-yml for many more options
+
+#Publish to PowerShell Gallery with this key
+environment:
+  NuGetApiKey:
+    secure: b/JNhR1gU9PguPtCMCdIJbz//PHtWfBBkSxJF7VEfgIBEcDSGZ0JL2yBPFLqmETV
+  CBUSERNAME:
+    secure: T6wKr43pQWdwqW8IZg5OW8GYGU/vGVh5v0rpUlm9tFk=
+  CBPASSWORD:
+    secure: tgn9ii+WdYdNNPvVn1D2KA==
+
+
+# Allow WMF5 (i.e. PowerShellGallery functionality)
+os: WMF 5
+
+# Skip on updates to the readme.
+# We can force this by adding [skip ci] or [ci skip] anywhere in commit message 
+skip_commits:
+  message: /updated readme.*|update readme.*s/
+
+build: false
+
+#Kick off the CI/CD pipeline
+test_script:
+  - ps: . .\build.ps1
+  
+# Install NuGet to interact with the PowerShell Gallery
+install:
+- ps: |
+    Install-PackageProvider -Name NuGet -Force | Out-Null
+    Install-Module -Name Pester -Force
+    Install-Module -Name posh-git -Force
