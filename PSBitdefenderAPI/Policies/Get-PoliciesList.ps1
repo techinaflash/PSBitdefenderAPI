@@ -17,7 +17,7 @@ function Get-PoliciesList {
     if ($Page) { $Options.page = $Page }
     if ($Page) { $Options.perPage = $PerPage }
 
-    $ret = Invoke-APIRequest -APIUri $Global:PoliciesAPIURI -Method "getPoliciesList" -Options $Options
+    $ret = Invoke-APIRequest -APIUri $Global:BDPoliciesAPIURI -Method "getPoliciesList" -Options $Options
 
     return $ret   
 }

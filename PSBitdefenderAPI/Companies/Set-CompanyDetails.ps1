@@ -24,7 +24,7 @@ function New-Company {
     if ($Name) { $Options.name = $Name }
     if ($Address) { $Options.address = $Address }
 
-    $ret = Invoke-APIRequest -APIUri $Global:CompaniesAPIURI -Method "updateCompanyDetails" -Options $Options
+    $ret = Invoke-APIRequest -APIUri $Global:BDCompaniesAPIURI -Method "updateCompanyDetails" -Options $Options
 
     return $ret
 }

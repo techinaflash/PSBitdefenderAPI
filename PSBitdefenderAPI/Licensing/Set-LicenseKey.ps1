@@ -14,7 +14,7 @@ function Set-LicenseKey {
 
     if ($CompanyID) { $Options.companyId = $CompanyID }
 
-    $ret = Invoke-APIRequest -APIUri $Global:LicensingAPIURI -Method "setLicenseKey" -Options $Options
+    $ret = Invoke-APIRequest -APIUri $Global:BDLicensingAPIURI -Method "setLicenseKey" -Options $Options
 
     return $ret   
 }

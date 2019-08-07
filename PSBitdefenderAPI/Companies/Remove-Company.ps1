@@ -9,7 +9,7 @@ function Remove-Company {
 
     $Options.companyId = $CompanyID   
 
-    $ret = Invoke-APIRequest -APIUri $Global:CompaniesAPIURI -Method "removeCompany" -Options $Options
+    $ret = Invoke-APIRequest -APIUri $Global:BDCompaniesAPIURI -Method "removeCompany" -Options $Options
 
     return $ret
 }

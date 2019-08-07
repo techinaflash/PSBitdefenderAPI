@@ -9,7 +9,7 @@ function Get-LicenseInfo {
 
     $Options.companyId = $CompanyID
 
-    $ret = Invoke-APIRequest -APIUri $Global:LicensingAPIURI -Method "getLicenseInfo" -Options $Options
+    $ret = Invoke-APIRequest -APIUri $Global:BDLicensingAPIURI -Method "getLicenseInfo" -Options $Options
 
     return $ret
 }

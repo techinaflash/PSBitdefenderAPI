@@ -22,7 +22,7 @@ function Set-MonthlySubscription {
     if ($ManageExchange) { $Options.manageExchange = $ManageExchange }
     if ($ManageEncryption) { $Options.manageEncryption = $ManageEncryption }
 
-    $ret = Invoke-APIRequest -APIUri $Global:LicensingAPIURI -Method "setMonthlyEncryption" -Options $Options
+    $ret = Invoke-APIRequest -APIUri $Global:BDLicensingAPIURI -Method "setMonthlyEncryption" -Options $Options
 
     return $ret   
 }

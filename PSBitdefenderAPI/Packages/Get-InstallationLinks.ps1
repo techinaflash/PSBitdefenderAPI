@@ -13,7 +13,7 @@ function Get-InstallationLinks {
     if ($CompanyID) { $Options.companyId = $CompanyID }
     if ($PackageName) { $Options.packageName = $PackageName }
 
-    $ret = Invoke-APIRequest -APIUri $Global:PackagesAPIURI -Method "getInstallationLinks" -Options $Options
+    $ret = Invoke-APIRequest -APIUri $Global:BDPackagesAPIURI -Method "getInstallationLinks" -Options $Options
 
     return $ret
 }

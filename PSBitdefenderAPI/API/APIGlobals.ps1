@@ -1,14 +1,14 @@
-$Global:APIKey = $null
+$Global:BitdefenderAPIKey = $null
 
 
-$Global:BaseAPIURI = "https://cloud.gravityzone.bitdefender.com/api/"
-$Global:AccountsAPIURI = $Global:BaseAPIURI + "v1.0/jsonrpc/accounts"
-$Global:CompaniesAPIURI = $Global:BaseAPIURI + "v1.0/jsonrpc/companies"
-$Global:IntegrationsAPIURI = $Global:BaseAPIURI + "v1.0/jsonrpc/integrations"
-$Global:LicensingAPIURI = $Global:BaseAPIURI + "v1.0/jsonrpc/licensing"
-$Global:NetworkAPIURI = $Global:BaseAPIURI + "v1.0/jsonrpc/network"
-$Global:PackagesAPIURI = $Global:BaseAPIURI + "v1.0/jsonrpc/packages"
-$Global:PoliciesAPIURI = $Global:BaseAPIURI + "v1.0/jsonrpc/policies"
-$Global:PushAPIURI = $Global:BaseAPIURI + "v1.0/jsonrpc/push"
-$Global:ReportsAPIURI = $Global:BaseAPIURI + "v1.0/jsonrpc/reports"
+$Global:BDBaseAPIURI = "https://cloud.gravityzone.bitdefender.com/api/"
+$Global:BDAccountsAPIURI = $Global:BDBaseAPIURI + "v1.0/jsonrpc/accounts"
+$Global:BDCompaniesAPIURI = $Global:BDBaseAPIURI + "v1.0/jsonrpc/companies"
+$Global:BDIntegrationsAPIURI = $Global:BDBaseAPIURI + "v1.0/jsonrpc/integrations"
+$Global:BDLicensingAPIURI = $Global:BDBaseAPIURI + "v1.0/jsonrpc/licensing"
+$Global:BDNetworkAPIURI = $Global:BDBaseAPIURI + "v1.0/jsonrpc/network"
+$Global:BDPackagesAPIURI = $Global:BDBaseAPIURI + "v1.0/jsonrpc/packages"
+$Global:BDPoliciesAPIURI = $Global:BDBaseAPIURI + "v1.0/jsonrpc/policies"
+$Global:BDPushAPIURI = $Global:BDBaseAPIURI + "v1.0/jsonrpc/push"
+$Global:BDReportsAPIURI = $Global:BDBaseAPIURI + "v1.0/jsonrpc/reports"
 

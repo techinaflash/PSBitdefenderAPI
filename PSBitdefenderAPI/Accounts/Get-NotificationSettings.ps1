@@ -9,7 +9,7 @@ function Get-NotificationSettings {
 
     if ($AccountID) { $Options.accountId = $AccountID }
 
-    $ret = Invoke-APIRequest -APIUri $Global:AccountsAPIURI -Method "getNotificationSettings" -Options $Options
+    $ret = Invoke-APIRequest -APIUri $Global:BDAccountsAPIURI -Method "getNotificationSettings" -Options $Options
 
     return $ret   
 }

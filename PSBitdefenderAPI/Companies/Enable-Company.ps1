@@ -13,7 +13,7 @@ function Enable-Company {
     $Options.companyId = $CompanyID   
     $Options.recursive = $Recurse
 
-    $ret = Invoke-APIRequest -APIUri $Global:CompaniesAPIURI -Method "activateCompany" -Options $Options
+    $ret = Invoke-APIRequest -APIUri $Global:BDCompaniesAPIURI -Method "activateCompany" -Options $Options
 
     return $ret
 }

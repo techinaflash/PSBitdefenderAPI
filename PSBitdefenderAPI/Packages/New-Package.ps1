@@ -123,7 +123,7 @@ function New-Package {
     if ($DeploymentProxyUser) { $Options.deploymentOptions.proxyUser = $DeploymentProxyUser }
     if ($DeploymentProxyPassword) { $Options.deploymentOptions.proxyPassword = $DeploymentProxyPassword }
 
-    $ret = Invoke-APIRequest -APIUri $Global:PackagesAPIURI -Method "createPackage" -Options $Options
+    $ret = Invoke-APIRequest -APIUri $Global:BDPackagesAPIURI -Method "createPackage" -Options $Options
 
     return $ret
 }

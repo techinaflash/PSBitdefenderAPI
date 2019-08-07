@@ -9,7 +9,7 @@ function Remove-Account {
 
     $Options.accountId = $AccountID
 
-    $ret = Invoke-APIRequest -APIUri $Global:PoliciesAPIURI -Method "deleteAccount" -Options $Options
+    $ret = Invoke-APIRequest -APIUri $Global:BDPoliciesAPIURI -Method "deleteAccount" -Options $Options
 
     return $ret   
 }

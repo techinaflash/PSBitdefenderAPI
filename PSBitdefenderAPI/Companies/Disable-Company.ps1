@@ -13,7 +13,7 @@ function Disable-Company {
     $Options.companyId = $CompanyID   
     $Options.recursive = $Recurse
 
-    $ret = Invoke-APIRequest -APIUri $Global:CompaniesAPIURI -Method "suspendCompany" -Options $Options
+    $ret = Invoke-APIRequest -APIUri $Global:BDCompaniesAPIURI -Method "suspendCompany" -Options $Options
 
     return $ret
 }

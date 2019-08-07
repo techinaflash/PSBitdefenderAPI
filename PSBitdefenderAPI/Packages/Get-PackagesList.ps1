@@ -17,7 +17,7 @@ function Get-PackagesList {
     if ($Page) { $Options.page = $Page }
     if ($PerPage) { $Options.perPage = $PerPage }
     
-    $ret = Invoke-APIRequest -APIUri $Global:PackagesAPIURI -Method "getPackagesList" -Options $Options
+    $ret = Invoke-APIRequest -APIUri $Global:BDPackagesAPIURI -Method "getPackagesList" -Options $Options
 
     return $ret
 }

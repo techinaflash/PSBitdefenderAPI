@@ -9,7 +9,7 @@ function Get-PoliciesList {
 
     $Options.policyId = $PolicyID
 
-    $ret = Invoke-APIRequest -APIUri $Global:PoliciesAPIURI -Method "getPolicyDetails" -Options $Options
+    $ret = Invoke-APIRequest -APIUri $Global:BDPoliciesAPIURI -Method "getPolicyDetails" -Options $Options
 
     return $ret   
 }

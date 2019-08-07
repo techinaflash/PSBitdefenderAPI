@@ -13,7 +13,7 @@ function Get-CompanyDetailsByUser {
     $Options.username = $Username
     $Options.password = $Password
 
-    $ret = Invoke-APIRequest -APIUri $Global:CompaniesAPIURI -Method "getCompanyDetailsByUser" -Options $Options
+    $ret = Invoke-APIRequest -APIUri $Global:BDCompaniesAPIURI -Method "getCompanyDetailsByUser" -Options $Options
 
     return $ret
 }

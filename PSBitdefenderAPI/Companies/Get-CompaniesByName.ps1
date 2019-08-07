@@ -9,7 +9,7 @@ function Get-CompaniesByName {
 
     $Options.nameFilter = $NameFilter
 
-    $ret = Invoke-APIRequest -APIUri $Global:CompaniesAPIURI -Method "findCompaniesByName" -Options $Options
+    $ret = Invoke-APIRequest -APIUri $Global:BDCompaniesAPIURI -Method "findCompaniesByName" -Options $Options
 
     return $ret
 }

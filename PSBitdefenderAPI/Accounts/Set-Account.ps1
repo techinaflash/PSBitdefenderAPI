@@ -59,7 +59,7 @@ function Set-Account {
     if ($RightsCompanyManager) { $Options.rights.companyManager = $RightsCompanyManager }
     if ($TargetIDs) { $Options.targetIds = $TargetIDs }
 
-    $ret = Invoke-APIRequest -APIUri $Global:AccountsAPIURI -Method "updateAccount" -Options $Options
+    $ret = Invoke-APIRequest -APIUri $Global:BDAccountsAPIURI -Method "updateAccount" -Options $Options
 
     return $ret   
 }

@@ -67,7 +67,7 @@ function New-Company {
     if ($LicenseExchange) { $Options.licenseSubscription.manageExchange = $LicenseExchange }
     if ($LicenseEncryption) { $Options.licenseSubscription.manageEncryption = $LicenseEncryption }
 
-    $ret = Invoke-APIRequest -APIUri $Global:CompaniesAPIURI -Method "createCompany" -Options $Options
+    $ret = Invoke-APIRequest -APIUri $Global:BDCompaniesAPIURI -Method "createCompany" -Options $Options
 
     return $ret
 }

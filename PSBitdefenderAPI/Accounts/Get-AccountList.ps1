@@ -17,7 +17,7 @@ function Get-AccountList {
     if ($Page) { $Options.page = $Page }
     if ($Page) { $Options.perPage = $PerPage }
 
-    $ret = Invoke-APIRequest -APIUri $Global:AccountsAPIURI -Method "getAccountList" -Options $Options
+    $ret = Invoke-APIRequest -APIUri $Global:BDAccountsAPIURI -Method "getAccountList" -Options $Options
 
     return $ret   
 }

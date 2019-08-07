@@ -89,8 +89,8 @@ FunctionsToExport = @(
     'New-Package',
     'Remove-Account',
     'Remove-Company',
-    'Set-APIKey',
-    'Set-APIURI',
+    'SetBitdefenderAPIKey',
+    'SetBitdefenderAPIURI',
     'Set-CompanyDetails',
     'Set-LicenseKey',
     'Set-MonthlySubscription'

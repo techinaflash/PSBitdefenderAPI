@@ -13,7 +13,7 @@ function Get-MonthlyUsage {
     $Options.companyId = $companyID
     $Options.targetMonth = $TargetMonth
 
-    $ret = Invoke-APIRequest -APIUri $Global:LicensingAPIURI -Method "getMonthlyUsage" -Options $Options
+    $ret = Invoke-APIRequest -APIUri $Global:BDLicensingAPIURI -Method "getMonthlyUsage" -Options $Options
 
     return $ret
 }

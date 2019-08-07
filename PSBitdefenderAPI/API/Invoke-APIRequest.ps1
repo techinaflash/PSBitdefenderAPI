@@ -2,7 +2,7 @@ function Invoke-APIRequest {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$False)]
-        [string]$APIKey = $Global:APIKey,
+        [string]$APIKey = $Global:$BitdefenderAPIKey,
 
         [Parameter(Mandatory=$True)]
         [string]$APIUri,
@@ -21,7 +21,7 @@ function Invoke-APIRequest {
     )
 
     if (!$APIKey) {
-        throw "API Key has not been set. Please use Set-APIKey before calling this function."
+        throw "API Key has not been set. Please use SetBitdefenderAPIKey before calling this function."
     } else {
         $Auth = "$($APIKey):$($null)"
         $AuthEnc = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes($Auth))

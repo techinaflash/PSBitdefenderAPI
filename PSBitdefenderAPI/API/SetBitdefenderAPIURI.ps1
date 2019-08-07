@@ -1,9 +1,9 @@
-function Set-APIURI {
+function SetBitdefenderAPIURI {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$True)]
         [string]$URI
     )
 
-    $Global:BaseAPIURI = $URI
+    $Global:BDBaseAPIURI = $URI
 }

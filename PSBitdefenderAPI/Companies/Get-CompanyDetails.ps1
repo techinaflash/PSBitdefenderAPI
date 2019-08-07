@@ -9,7 +9,7 @@ function Get-CompanyDetails {
 
     $Options.companyId = $CompanyID
 
-    $ret = Invoke-APIRequest -APIUri $Global:CompaniesAPIURI -Method "getCompanyDetails" -Options $Options
+    $ret = Invoke-APIRequest -APIUri $Global:BDCompaniesAPIURI -Method "getCompanyDetails" -Options $Options
 
     return $ret
 }
