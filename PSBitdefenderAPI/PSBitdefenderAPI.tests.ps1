@@ -1,7 +1,7 @@
 $projectRoot = Resolve-Path "$PSScriptRoot\.."
 $moduleRoot = Split-Path (Resolve-Path "$projectRoot\*\*.psm1")
 $moduleName = Split-Path $moduleRoot -Leaf
-$PSDefaultParameterValues['*:Verbose'] = $true
+#$PSDefaultParameterValues['*:Verbose'] = $true
 
 
 Describe "General project validation: $moduleName" {
