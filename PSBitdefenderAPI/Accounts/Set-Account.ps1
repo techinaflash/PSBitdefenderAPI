@@ -37,7 +37,7 @@ function Set-Account {
         [Parameter(Mandatory=$False)]
         [bool]$RightsCompanyManager = $null,
 
-        [Parameter(Mandatory=$False)
+        [Parameter(Mandatory=$False)]
         [array]$TargetIDs = $null
     )
 

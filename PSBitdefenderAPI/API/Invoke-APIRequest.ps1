@@ -2,7 +2,7 @@ function Invoke-APIRequest {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$False)]
-        [string]$APIKey = $Global:$BitdefenderAPIKey,
+        [string]$APIKey = $Global:BitdefenderAPIKey,
 
         [Parameter(Mandatory=$True)]
         [string]$APIUri,

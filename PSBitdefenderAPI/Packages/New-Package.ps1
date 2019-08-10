@@ -103,7 +103,7 @@ function New-Package {
     if ($ModuleContentControl) { $Options.modules.contentControl = $ModuleContentControl }
     if ($ModuleDeviceControl) { $Options.modules.deviceControl = $ModuleDeviceControl }
     if ($ModulePowerUser) { $Options.modules.powerUser = $ModulePowerUser }
-    if ($ScanModeType { $Options.scanMode.type = $ScanModeType }
+    if ($ScanModeType) { $Options.scanMode.type = $ScanModeType }
     if ($ScanModeComputersMain) { $Options.scanMode.computers.main = $ScanModeComputersMain }
     if ($ScanModeComputersFallback) { $Options.scanMode.computers.fallback = $ScanModeComputersFallback }
     if ($ScanModeVMSMain) { $Options.scanMode.vms.main =  $ScanModeVMSMain }

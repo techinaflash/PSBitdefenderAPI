@@ -14,7 +14,7 @@ function Set-NotificationSettings {
         [bool]$IncludeDeviceName = $null,
 
         [Parameter(Mandatory=$False)]
-        [bool]$IncludeDeviceFQDN = $null,
+        [bool]$IncludeDeviceFQDN = $null
 
 
     )
