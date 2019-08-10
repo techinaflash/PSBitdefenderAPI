@@ -1,8 +1,3 @@
-#
-# This is a PowerShell Unit Test file.
-# You need a unit test framework such as Pester to run PowerShell Unit tests. 
-# You can download Pester from http://go.microsoft.com/fwlink/?LinkID=534084
-#
 $projectRoot = Resolve-Path "$PSScriptRoot\.."
 $moduleRoot = Split-Path (Resolve-Path "$projectRoot\*\*.psm1")
 $moduleName = Split-Path $moduleRoot -Leaf
@@ -10,6 +5,7 @@ $PSDefaultParameterValues['*:Verbose'] = $true
 
 
 Describe "General project validation: $moduleName" {
+
     $scripts = Get-ChildItem $projectRoot -Include *.ps1,*.psm1,*.psd1 -Recurse
 
     # TestCases are splatted to the script so we need hashtables
@@ -22,9 +18,7 @@ Describe "General project validation: $moduleName" {
         $contents = Get-Content -Path $file.fullname -ErrorAction Stop
         $errors = $null
         $null = [System.Management.Automation.PSParser]::Tokenize($contents, [ref]$errors)
-		#if($errors.Count -gt 0){
-			#foreach($err in $errors){Write-Verbose "***ERROR***: $($err.Message)"}
-		#}
+		Write-Verbose $errors
         $errors.Count | Should Be 0
     }
 
