@@ -1,4 +1,4 @@
-function Enable-Company {
+function EnableBitdefenderCompany {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$True)]
@@ -13,7 +13,7 @@ function Enable-Company {
     $Options.companyId = $CompanyID   
     $Options.recursive = $Recurse
 
-    $ret = Invoke-APIRequest -APIUri $Global:BDCompaniesAPIURI -Method "activateCompany" -Options $Options
+    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDCompaniesAPIURI -Method "activateCompany" -Options $Options
 
     return $ret
 }

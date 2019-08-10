@@ -1,4 +1,4 @@
-function New-Account {
+function NewBitdefenderAccount {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$True)]
@@ -60,7 +60,7 @@ function New-Account {
     if ($RightsCompanyManager) { $Options.rights.companyManager = $RightsCompanyManager }
     if ($TargetIDs) { $Options.targetIds = $TargetIDs }
 
-    $ret = Invoke-APIRequest -APIUri $Global:BDAccountsAPIURI -Method "createAccount" -Options $Options
+    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDAccountsAPIURI -Method "createAccount" -Options $Options
 
     return $ret   
 }

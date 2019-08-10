@@ -1,4 +1,4 @@
-function Get-MonthlyUsage {
+function GetBitdefenderMonthlyUsage {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$True)]
@@ -13,7 +13,7 @@ function Get-MonthlyUsage {
     $Options.companyId = $companyID
     $Options.targetMonth = $TargetMonth
 
-    $ret = Invoke-APIRequest -APIUri $Global:BDLicensingAPIURI -Method "getMonthlyUsage" -Options $Options
+    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDLicensingAPIURI -Method "getMonthlyUsage" -Options $Options
 
     return $ret
 }

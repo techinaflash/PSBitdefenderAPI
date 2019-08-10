@@ -1,4 +1,4 @@
-function Get-LicenseInfo {
+function GetBitdefenderLicenseInfo {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$True)]
@@ -9,7 +9,7 @@ function Get-LicenseInfo {
 
     $Options.companyId = $CompanyID
 
-    $ret = Invoke-APIRequest -APIUri $Global:BDLicensingAPIURI -Method "getLicenseInfo" -Options $Options
+    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDLicensingAPIURI -Method "getLicenseInfo" -Options $Options
 
     return $ret
 }

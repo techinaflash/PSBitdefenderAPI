@@ -1,4 +1,4 @@
-function Get-CompaniesByName {
+function GetBitdefenderCompaniesByName {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$True)]
@@ -9,7 +9,7 @@ function Get-CompaniesByName {
 
     $Options.nameFilter = $NameFilter
 
-    $ret = Invoke-APIRequest -APIUri $Global:BDCompaniesAPIURI -Method "findCompaniesByName" -Options $Options
+    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDCompaniesAPIURI -Method "findCompaniesByName" -Options $Options
 
     return $ret
 }

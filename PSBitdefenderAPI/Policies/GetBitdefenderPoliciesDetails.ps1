@@ -1,4 +1,4 @@
-function Get-PoliciesList {
+function GetBitdefenderPoliciesList {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$True)]
@@ -9,7 +9,7 @@ function Get-PoliciesList {
 
     $Options.policyId = $PolicyID
 
-    $ret = Invoke-APIRequest -APIUri $Global:BDPoliciesAPIURI -Method "getPolicyDetails" -Options $Options
+    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDPoliciesAPIURI -Method "getPolicyDetails" -Options $Options
 
     return $ret   
 }

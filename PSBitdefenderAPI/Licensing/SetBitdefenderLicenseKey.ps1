@@ -1,4 +1,4 @@
-function Set-LicenseKey {
+function SetBitdefenderLicenseKey {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$True)]
@@ -14,7 +14,7 @@ function Set-LicenseKey {
 
     if ($CompanyID) { $Options.companyId = $CompanyID }
 
-    $ret = Invoke-APIRequest -APIUri $Global:BDLicensingAPIURI -Method "setLicenseKey" -Options $Options
+    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDLicensingAPIURI -Method "setLicenseKey" -Options $Options
 
     return $ret   
 }

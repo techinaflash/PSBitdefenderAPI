@@ -1,4 +1,4 @@
-function New-Company {
+function NewBitdefenderCompany {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$True)]
@@ -24,7 +24,7 @@ function New-Company {
     if ($Name) { $Options.name = $Name }
     if ($Address) { $Options.address = $Address }
 
-    $ret = Invoke-APIRequest -APIUri $Global:BDCompaniesAPIURI -Method "updateCompanyDetails" -Options $Options
+    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDCompaniesAPIURI -Method "updateCompanyDetails" -Options $Options
 
     return $ret
 }

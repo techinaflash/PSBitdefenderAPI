@@ -1,4 +1,4 @@
-function Get-InstallationLinks {
+function GetBitdefenderInstallationLinks {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$False)]
@@ -13,7 +13,7 @@ function Get-InstallationLinks {
     if ($CompanyID) { $Options.companyId = $CompanyID }
     if ($PackageName) { $Options.packageName = $PackageName }
 
-    $ret = Invoke-APIRequest -APIUri $Global:BDPackagesAPIURI -Method "getInstallationLinks" -Options $Options
+    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDPackagesAPIURI -Method "getInstallationLinks" -Options $Options
 
     return $ret
 }

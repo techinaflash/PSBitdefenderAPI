@@ -1,4 +1,4 @@
-function Remove-Company {
+function RemoveBitdefenderCompany {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$True)]
@@ -9,7 +9,7 @@ function Remove-Company {
 
     $Options.companyId = $CompanyID   
 
-    $ret = Invoke-APIRequest -APIUri $Global:BDCompaniesAPIURI -Method "removeCompany" -Options $Options
+    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDCompaniesAPIURI -Method "removeCompany" -Options $Options
 
     return $ret
 }

@@ -1,4 +1,4 @@
-function New-Company {
+function NewBitdefenderCompany {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$True)]
@@ -67,7 +67,7 @@ function New-Company {
     if ($LicenseExchange) { $Options.licenseSubscription.manageExchange = $LicenseExchange }
     if ($LicenseEncryption) { $Options.licenseSubscription.manageEncryption = $LicenseEncryption }
 
-    $ret = Invoke-APIRequest -APIUri $Global:BDCompaniesAPIURI -Method "createCompany" -Options $Options
+    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDCompaniesAPIURI -Method "createCompany" -Options $Options
 
     return $ret
 }

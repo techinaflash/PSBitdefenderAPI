@@ -41,9 +41,7 @@ Describe "Testing the internal authorization function:" {
 		}
 		It "Setting BitdefenderAPIKey:" {
 			SetBitdefenderAPIKey -APIKey $env:APIKEY
-			Write-Host $env:APIKEY
 			$Global:BitdefenderAPIKey | Should -Not -Be $null 
-			Write-Host $Global:BitdefenderAPIKey
 		}
 		
 		

@@ -1,4 +1,4 @@
-function Set-NotificationSettings {
+function SetBitdefenderNotificationSettings {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$False)]

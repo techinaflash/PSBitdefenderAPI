@@ -1,4 +1,4 @@
-function Get-PackagesList {
+function GetBitdefenderPackagesList {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$False)]
@@ -17,7 +17,7 @@ function Get-PackagesList {
     if ($Page) { $Options.page = $Page }
     if ($PerPage) { $Options.perPage = $PerPage }
     
-    $ret = Invoke-APIRequest -APIUri $Global:BDPackagesAPIURI -Method "getPackagesList" -Options $Options
+    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDPackagesAPIURI -Method "getPackagesList" -Options $Options
 
     return $ret
 }

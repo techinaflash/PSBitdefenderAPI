@@ -1,4 +1,4 @@
-function Disable-Company {
+function DisableBitdefenderCompany {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$True)]
@@ -13,7 +13,7 @@ function Disable-Company {
     $Options.companyId = $CompanyID   
     $Options.recursive = $Recurse
 
-    $ret = Invoke-APIRequest -APIUri $Global:BDCompaniesAPIURI -Method "suspendCompany" -Options $Options
+    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDCompaniesAPIURI -Method "suspendCompany" -Options $Options
 
     return $ret
 }

@@ -1,4 +1,4 @@
-function Invoke-APIRequest {
+function InvokeBitdefenderAPIRequest {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$False)]
