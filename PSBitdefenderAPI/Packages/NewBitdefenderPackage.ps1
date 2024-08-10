@@ -14,19 +14,19 @@ function NewBitdefenderPackage {
         [string]$Language = $null,
 
         [Parameter(Mandatory=$False)]
-        [bool]$ModuleATC = $null,
+        [bool]$ModuleATC = $True,
 
         [Parameter(Mandatory=$False)]
-        [bool]$ModuleFirewall = $null,
+        [bool]$ModuleFirewall = $True,
 
         [Parameter(Mandatory=$False)]
-        [bool]$ModuleContentControl = $null,
+        [bool]$ModuleContentControl = $True,
 
         [Parameter(Mandatory=$False)]
-        [bool]$ModuleDeviceControl = $null,
+        [bool]$ModuleDeviceControl = $False,
 
         [Parameter(Mandatory=$False)]
-        [bool]$ModulePowerUser = $null,
+        [bool]$ModulePowerUser = $True,
 
         [Parameter(Mandatory=$False)]
         [int]$ScanModeType = $null,
@@ -50,7 +50,7 @@ function NewBitdefenderPackage {
         [int]$ScanModeEC2Fallback = $null,
 
         [Parameter(Mandatory=$False)]
-        [bool]$SettingScanBeforeInstall = $null,
+        [bool]$SettingScanBeforeInstall = $False,
 
         [Parameter(Mandatory=$False)]
         [string]$SettingUninstallPassword = $null,
@@ -59,16 +59,16 @@ function NewBitdefenderPackage {
         [string]$SettingCustomInstallPath = $null,
 
         [Parameter(Mandatory=$False)]
-        [bool]$RoleRelay = $null,
+        [bool]$RoleRelay = $False,
 
         [Parameter(Mandatory=$False)]
-        [bool]$RoleExchange = $null,
+        [bool]$RoleExchange = $False,
 
         [Parameter(Mandatory=$False)]
         [int]$DeploymentType = $null,
 
         [Parameter(Mandatory=$False)]
-        [bool]$DeploymentCommProxy = $null,
+        [bool]$DeploymentCommProxy = $False,
 
         [Parameter(Mandatory=$False)]
         [string]$DeploymentProxyServer = $null,
