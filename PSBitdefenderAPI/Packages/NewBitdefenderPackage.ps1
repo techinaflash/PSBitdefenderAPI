@@ -46,7 +46,7 @@ function NewBitdefenderPackage {
         [Parameter(Mandatory=$False)]
         [int]$ScanModeEC2Main = $null,
 
-        [Paremeter(Mandatory=$False)]
+        [Parameter(Mandatory=$False)]
         [int]$ScanModeEC2Fallback = $null,
 
         [Parameter(Mandatory=$False)]
