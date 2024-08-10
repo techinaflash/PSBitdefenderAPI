@@ -41,10 +41,10 @@ function NewBitdefenderCompany {
         [int]$LicenseReservedSlots = $null,
 
         [Parameter(Mandatory=$False)]
-        [bool]$LicenseExchange = $null,
+        [bool]$LicenseExchange = $false,
 
         [Parameter(Mandatory=$False)]
-        [bool]$LicenseEncryption = $null
+        [bool]$LicenseEncryption = $false
     )
 
     $Options = @{}
